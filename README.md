@@ -30,3 +30,15 @@ por ";", logo após utilizamos o "writer.WriteLine(linha)" só para ela printar 
   E agora nós iniciamos a "interface" do nosso programa, abrimos com a variável "opcao" com uma string vazia e embaixo iniciamos um loop com o "while" que irá rodar até que a opção digitada seja "0", e logo abaixo pra darmos
 realmente inicio a interface apenas abrimos alguns "Console.WriteLines" para personalizar e instruir o usuário a como fazer a inserção de um evento, a comprar um ingresso, a imprimir o relátorio de eventos ou até mesmo a 
 sair do programa.
+
+----
+
+Este trecho de código tem o objetivo de facilitar o cadastro de eventos, a compra de ingressos por parte dos usuários e a geração de relatórios sobre os eventos e suas vendas.
+
+O funcionamento central do sistema está baseado em um bloco switch que executa diferentes ações de acordo com a opção escolhida pelo usuário. Ao iniciar, o programa pode sair imediatamente se a opção selecionada for "0". Caso o usuário escolha o "1", o sistema inicia o processo de cadastro de um novo evento, solicitando informações como nome do evento, valor, idade mínima para participação e quantidade de ingressos disponíveis. Há uma verificação para garantir que a idade mínima seja superior a 13 anos. Se os dados forem válidos, o evento é salvo em um arquivo chamado "dados/eventos.txt" e o usuário recebe uma confirmação na tela.
+
+Se a opção selecionada for "2", o sistema permite a compra de ingressos. Ele inicia lendo os eventos armazenados no arquivo "dados/eventos.txt" e exibe uma lista numerada dos eventos disponíveis para o usuário escolher. Após a seleção do evento, o código verifica a validade da escolha e lê os usuários do arquivo "dados/usuarios.txt" para encontrar aqueles que já compraram ingressos para o evento selecionado. Se ainda houver ingressos disponíveis, o sistema solicita informações do usuário, como nome, idade e e-mail, realizando verificações adicionais para garantir que a idade seja apropriada e o e-mail contenha um domínio válido. Se todas as verificações forem bem-sucedidas, os dados do usuário são salvos no arquivo "dados/usuarios.txt" e uma confirmação é exibida na tela.
+
+Na opção "3", o sistema gera um relatório detalhado, lendo os eventos e usuários dos arquivos "dados/eventos.txt" e "dados/usuarios.txt", respectivamente. Ele calcula o total de eventos cadastrados, a quantidade de ingressos adquiridos por evento e o valor monetário arrecadado por cada evento. O relatório também inclui o valor total arrecadado por todos os eventos. Após exibir essas informações, o sistema aguarda que o usuário pressione uma tecla para continuar.
+
+Resumindo, este código proporciona uma maneira eficiente de gerenciar eventos e vendas de ingressos, assegurando que todas as entradas de dados sejam validadas adequadamente e fornecendo relatórios detalhados sobre a atividade dos eventos e suas vendas.
